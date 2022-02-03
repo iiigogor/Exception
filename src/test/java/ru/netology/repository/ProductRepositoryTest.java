@@ -37,6 +37,5 @@ class ProductRepositoryTest {
         Assertions.assertThrows(NotFoundExeption.class, () -> {
             repo.removeById(5);
         });
-
     }
 }

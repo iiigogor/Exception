@@ -1,13 +1,13 @@
 package ru.netology.repository;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.BeforeEach;
 import ru.netology.domain.Book;
 import ru.netology.domain.NotFoundExeption;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Product;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ProductRepositoryTest {
     private ProductRepository repo = new ProductRepository();
@@ -34,7 +34,7 @@ class ProductRepositoryTest {
 
     @Test
     void shouldThrowAnException() {
-        Assertions.assertThrows(NotFoundExeption.class, () -> {
+        assertThrows(NotFoundExeption.class, () -> {
             repo.removeById(5);
         });
     }
